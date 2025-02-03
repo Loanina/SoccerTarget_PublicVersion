@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653f19cea0384f889c6cc4e11cce3c90, type: 3}
+  m_Name: FirstPlayerTargetConfig
+  m_EditorClassIdentifier: 
+  timeToRemoveEffects: 2
+  targetReference: {fileID: 805049005417876676, guid: 881721df7f9b89f49af6bcde11b7d120, type: 3}
+  destroyEffect: {fileID: 4541506532330019160, guid: 122c75fab1b707d40a8a0e0d0c6fb66c, type: 3}
+  spawnPoints:
+  - {x: 0, y: 1.299, z: 0}
+  - {x: 0.92, y: 1.65, z: 0}
+  - {x: -1, y: 0.645, z: 0}
+  - {x: 1.026, y: 0.971, z: 0}
+  - {x: -1.091, y: 1.65, z: 0}
+  - {x: 0, y: 0.576, z: 0}
+  - {x: 0.456, y: 1.65, z: 0}
+  - {x: -1.127, y: 1.65, z: 0}
+  - {x: 0.616, y: 1.65, z: 0}
+  - {x: 0.007, y: 1.165, z: 0}

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4503de1bd843d3a07f5001a6b9202b, type: 3}
+  m_Name: MusicSettings
+  m_EditorClassIdentifier: 
+  menuMusic: {fileID: 8300000, guid: 3294259accce43247b10a5cdaa928f3a, type: 3}
+  menuMusicVolume: 0.5
+  backgroundMusic:
+  - {fileID: 8300000, guid: 9f6ae7dc7f913a040b93ba057fbe1aa9, type: 3}
+  - {fileID: 8300000, guid: ef90718816fabfe428832d20b10ff434, type: 3}
+  - {fileID: 8300000, guid: 57b1c8280aa7b974483d3e09719ba2b3, type: 3}
+  backgroundMusicVolume: 0.15
+  ballThrow: {fileID: 8300000, guid: a2db86cc2439bb348a1a99c25da6c0f5, type: 3}
+  ballThrowVolume: 1
+  maxPitch: 1.7
+  minPitch: 0.9
+  crowd: {fileID: 8300000, guid: c322d6a5629600746a295fa51e21840b, type: 3}
+  crowdVolume: 0.3
+  winCrowd: {fileID: 8300000, guid: c6a94361e949798429f9f77270ac2e7d, type: 3}
+  winCrowdVolume: 0.3
+  win: {fileID: 8300000, guid: e0e8e7ff5b575ad418c7f1004929fc3a, type: 3}
+  winVolume: 0.3
+  highBeep: {fileID: 8300000, guid: 3b8840eaa449c9746b3475566610d306, type: 3}
+  highBeepVolume: 0.07
+  lowBeep: {fileID: 8300000, guid: 43dd668f4c2d9ad4495f5bd22cdce86a, type: 3}
+  lowBeepVolume: 0.22
+  targetHit: {fileID: 8300000, guid: 591b3573bfc12ea4f92c52d4d2fd972b, type: 3}
+  targetHitVolume: 0.8
+  maxTargetPitch: 1.1
+  minTargetPitch: 0.9
