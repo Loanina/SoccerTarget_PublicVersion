@@ -12,6 +12,7 @@ namespace Installers
         {
             Container.BindInstance(musicSettings).AsSingle();
             Container.BindInterfacesAndSelfTo<AudioManager>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<GlobalLifecycleManager>().AsSingle().NonLazy();
         }
     }
 }

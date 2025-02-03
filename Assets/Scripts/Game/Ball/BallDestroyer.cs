@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using Zenject;
@@ -10,24 +11,35 @@ namespace Game.Ball
     {
         private readonly DiContainer container;
         private readonly BallSettings settings;
+        private readonly GlobalLifecycleManager lifecycleManager;
 
-        public BallDestroyer(DiContainer container, BallSettings settings)
+        public BallDestroyer(DiContainer container, BallSettings settings, GlobalLifecycleManager lifecycleManager)
         {
             this.container = container;
             this.settings = settings;
+            this.lifecycleManager = lifecycleManager;
         }
 
         public async Task DestroyWithEffect(GameObject ball, Transform parent)
         {
-            await Task.Delay(TimeSpan.FromSeconds(settings.destroyDelay));
-
-            if (settings.destroyEffect != null)
+            var token = lifecycleManager.RegisterTask();
+            
+            try
             {
-                var effect = container.InstantiatePrefab(settings.destroyEffect, parent);
-                effect.transform.position = ball.transform.position;
-                Object.Destroy(effect, 2f);
+                await Task.Delay(TimeSpan.FromSeconds(settings.destroyDelay), token);
+                
+                if (settings.destroyEffect != null && ball != null)
+                {
+                    var effect = container.InstantiatePrefab(settings.destroyEffect, parent);
+                    effect.transform.position = ball.transform.position;
+                    Object.Destroy(effect, 2f);
+                }
+                Object.Destroy(ball);
             }
-            Object.Destroy(ball);
+            catch (TaskCanceledException)
+            {
+                Debug.Log("Ball destroy with effect was cancelled");
+            }
         }
     }
 }

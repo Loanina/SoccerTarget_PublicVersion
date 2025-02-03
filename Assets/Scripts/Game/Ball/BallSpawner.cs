@@ -24,7 +24,6 @@ namespace Game.Ball
         {
             ballsContainer = new GameObject("Balls");
             ballsContainer.transform.SetParent(ballsParent, false);
-           // balls.transform.localPosition = Vector3.zero;
         }
 
         public void Dispose()
@@ -36,7 +35,6 @@ namespace Game.Ball
         public GameObject Spawn()
         {
             var ball = ballFactory.CreateBall(ballsContainer.transform);
-            //   ball.transform.localPosition = ballSettings.localSpawnPoint;
             _ = ballDestroyer.DestroyWithEffect(ball, ballsContainer.transform);
             
             return ball;
