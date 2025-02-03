@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Ball
+namespace Game.Ball
 {
     public interface IBallDestroyer
     {

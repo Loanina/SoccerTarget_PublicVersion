@@ -4,7 +4,7 @@ using UnityEngine;
 using Zenject;
 using Object = UnityEngine.Object;
 
-namespace Ball
+namespace Game.Ball
 {
     public class BallDestroyer : IBallDestroyer
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Ball
+namespace Game.Ball
 {
     public interface IBallFactory
     {

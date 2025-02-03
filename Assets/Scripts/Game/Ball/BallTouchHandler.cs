@@ -1,8 +1,9 @@
-﻿using TouchScript.Gestures;
+﻿using System.Collections;
+using TouchScript.Gestures;
 using UnityEngine;
 using Zenject;
 
-namespace Ball
+namespace Game.Ball
 {
     public class BallTouchHandler : MonoBehaviour
     {
@@ -37,17 +38,13 @@ namespace Ball
             if (!Physics.Raycast(ray, out var hit)) return;
             ballThrower.Throw(hit.point);
             player.IncreaseTotalAttempts();
-            Freeze();
+            StartCoroutine(FreezeCoroutine());
         }
 
-        private void Freeze()
+        private IEnumerator FreezeCoroutine()
         {
             isFreezing = true;
-            Invoke(nameof(ResetTouch), freezeTime);
-        }
-
-        private void ResetTouch()
-        {
+            yield return new WaitForSeconds(freezeTime);
             isFreezing = false;
         }
     }

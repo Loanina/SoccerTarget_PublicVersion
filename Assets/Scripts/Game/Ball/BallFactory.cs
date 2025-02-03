@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace Ball
+namespace Game.Ball
 {
     public class BallFactory : IBallFactory
     {
