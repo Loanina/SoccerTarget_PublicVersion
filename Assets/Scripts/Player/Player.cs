@@ -43,11 +43,6 @@ namespace Player
             return totalAttempts;
         }
 
-        public void OnDestroy()
-        {
-            audioManager.StopWinCrowd();
-        }
-
         private void OnCountdownFinished()
         {
             CanShoot = true;

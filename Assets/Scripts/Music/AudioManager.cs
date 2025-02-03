@@ -37,6 +37,23 @@ namespace Music
 
             PlayBackgroundMusic();
         }
+
+        public void StopAll()
+        {
+            musicSource.Stop();
+            effectsSource.Stop();
+            ballThrowAudioSource.Stop();
+            targetAudioSource.Stop();
+            crowdSource.Stop();
+        }
+
+        public void StopGameSounds()
+        {
+            crowdSource.Stop();
+            effectsSource.Stop();
+            ballThrowAudioSource.Stop();
+            targetAudioSource.Stop();
+        }
         
         private void PlayBackgroundMusic()
         {
@@ -117,11 +134,6 @@ namespace Music
             crowdSource.loop = true;
             crowdSource.volume = musicSettings.winCrowdVolume;
             crowdSource.Play();
-        }
-
-        public void StopWinCrowd()
-        {
-            crowdSource.Stop();
         }
         
         public void PlayTargetHit()

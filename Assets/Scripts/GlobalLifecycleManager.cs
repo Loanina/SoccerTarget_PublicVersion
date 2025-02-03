@@ -33,12 +33,13 @@ public class GlobalLifecycleManager : IInitializable, IDisposable
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         CancelAllTasks();
-       // audioManager.StopAll();
+        audioManager.StopGameSounds();
     }
 
     private void OnApplicationQuit()
     {
         CancelAllTasks();
+        audioManager.StopAll();
     }
 
     public CancellationToken RegisterTask()
