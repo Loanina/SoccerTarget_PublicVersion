@@ -1,4 +1,5 @@
 ﻿using System;
+using Game.Сrumble;
 using UnityEngine;
 using Zenject;
 
@@ -20,11 +21,11 @@ namespace Game.Target
         public void DestroyTarget(GameObject target, Action onDestroyed)
         {
             SpawnDestroyEffect(target);
-            var destruction = target.GetComponent<DestructionObject>();
+            var destruction = target.GetComponent<CrumblingObject>();
 
             if (destruction != null)
             {
-                destruction.DestroyTarget(() => onDestroyed?.Invoke());
+                destruction.Crumble(() => onDestroyed?.Invoke());
             }
             else
             {

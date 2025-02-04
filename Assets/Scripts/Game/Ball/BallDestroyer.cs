@@ -32,7 +32,15 @@ namespace Game.Ball
                 {
                     var effect = container.InstantiatePrefab(settings.destroyEffect, parent);
                     effect.transform.position = ball.transform.position;
-                    Object.Destroy(effect, 2f);
+                    if (Application.isPlaying)
+                    {
+                        Object.Destroy(effect, 2f);
+                    }
+                    else
+                    {
+                        Object.DestroyImmediate(effect);
+                    }
+
                 }
                 Object.Destroy(ball);
             }

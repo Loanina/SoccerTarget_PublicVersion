@@ -1,3 +1,4 @@
+using Game.Сrumble;
 using UnityEngine;
 
 namespace Game.Target
@@ -15,9 +16,13 @@ namespace Game.Target
 
         private void Hit()
         {
-            var destroy = target.GetComponent<DestructionObject>();
-            destroy.DestroyTarget();
-            var effect = Instantiate(destroyEffect, target.transform.position, new Quaternion(), null);
+            if (target.TryGetComponent(out CrumblingObject destroy))
+            {
+                destroy.Crumble();
+            }
+
+            if (destroyEffect == null) return;
+            var effect = Instantiate(destroyEffect, target.transform.position, Quaternion.identity);
             Destroy(effect, 2f);
         }
     }
