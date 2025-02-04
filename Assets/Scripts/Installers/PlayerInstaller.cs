@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Game.Ball;
 using Game.Crowd;
-using Target;
+using Game.Target;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
@@ -21,7 +21,9 @@ namespace Installers
         public override void InstallBindings()
         {
             Container.Bind<Player.Player>().FromInstance(player).AsSingle();
-            Container.BindInterfacesAndSelfTo<TargetController>().AsSingle().WithArguments(targetConfig, parentForObjects);
+            Container.BindInterfacesAndSelfTo<TargetController>().AsSingle();
+            Container.Bind<TargetSpawner>().AsSingle().WithArguments(targetConfig, parentForObjects);
+            Container.Bind<TargetDestroyer>().AsSingle().WithArguments(targetConfig, parentForObjects);
             Container.BindInterfacesAndSelfTo<BallSpawner>().AsSingle().WithArguments(parentForObjects);
             Container.Bind<BallThrower>().AsSingle().WithArguments(ballSettings);
             Container.Bind<BallTouchHandler>().FromInstance(ballTouchHandler).AsSingle();

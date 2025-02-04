@@ -2,7 +2,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Target
+namespace Game.Target
 {
     public class DestructionObject : MonoBehaviour
     {

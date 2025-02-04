@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Target
+namespace Game.Target
 {
     public class MenuTargetController : MonoBehaviour
     {

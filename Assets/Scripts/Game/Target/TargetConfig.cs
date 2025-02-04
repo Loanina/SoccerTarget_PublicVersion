@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Target
+namespace Game.Target
 {
     [CreateAssetMenu (fileName = "TargetConfig", menuName = "Settings/Target config")]
     public class TargetConfig : ScriptableObject
