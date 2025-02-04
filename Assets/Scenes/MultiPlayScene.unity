@@ -618,39 +618,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28988266}
   m_CullTransparentMesh: 1
---- !u!1 &30220845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 30220846}
-  m_Layer: 0
-  m_Name: Peoples
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &30220846
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30220845}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1246523793}
-  - {fileID: 661917681}
-  m_Father: {fileID: 581680593}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &37090866
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,6 +6231,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 451143328}
   - {fileID: 1496916648}
+  - {fileID: 1246523793}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6284,6 +6252,36 @@ MonoBehaviour:
   player: {fileID: 2016810520}
   ballTouchHandler: {fileID: 963194230}
   parentForObjects: {fileID: 451143328}
+  crowdAnimators:
+  - {fileID: 2965216996732559866}
+  - {fileID: 2113347860280770}
+  - {fileID: 736968841138213913}
+  - {fileID: 4821573921864490469}
+  - {fileID: 3982989391349497284}
+  - {fileID: 7382785099621747472}
+  - {fileID: 4821573922120704926}
+  - {fileID: 4821573923171296650}
+  - {fileID: 4821573922045037219}
+  - {fileID: 2965216996193117372}
+  - {fileID: 7382785099751340448}
+  - {fileID: 6595388470518066}
+  - {fileID: 8589802185533578163}
+  - {fileID: 6064569263510788495}
+  - {fileID: 4741460637390746040}
+  - {fileID: 2213138244140640438}
+  - {fileID: 2213138243106914754}
+  - {fileID: 2213138242680088245}
+  - {fileID: 2213138242718988249}
+  - {fileID: 6064569263785866621}
+  - {fileID: 6595388775448280}
+  - {fileID: 4741460637591628206}
+  - {fileID: 6595388635872563}
+  - {fileID: 4741460637538952282}
+  - {fileID: 2213138243849713849}
+  - {fileID: 1435654424}
+  - {fileID: 1435464283}
+  - {fileID: 341080946}
+  - {fileID: 81669092}
 --- !u!114 &412437095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8480,7 +8478,6 @@ Transform:
   - {fileID: 133315110}
   - {fileID: 368558000}
   - {fileID: 1467022764}
-  - {fileID: 30220846}
   - {fileID: 682557027}
   - {fileID: 260422206}
   - {fileID: 1254224193}
@@ -9233,9 +9230,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661917681}
-  - component: {fileID: 661917682}
   m_Layer: 0
-  m_Name: SecondPlayerCrowd
+  m_Name: Crowd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9248,8 +9244,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661917680}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.57, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: 0.00999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9282,51 +9278,9 @@ Transform:
   - {fileID: 1258642793}
   - {fileID: 1133998002}
   - {fileID: 958349000}
-  m_Father: {fileID: 30220846}
+  m_Father: {fileID: 868716879}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &661917682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661917680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f31e687c018724084105d2ef3c94c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crowdAnimator:
-  - {fileID: 4821573922570178521}
-  - {fileID: 2965216995620922262}
-  - {fileID: 4821573921379805093}
-  - {fileID: 3982989392774566298}
-  - {fileID: 7382785099099804514}
-  - {fileID: 736968842162434925}
-  - {fileID: 4821573921681682544}
-  - {fileID: 2113347732581503}
-  - {fileID: 4821573921409323036}
-  - {fileID: 2965216995718797856}
-  - {fileID: 7382785099852811737}
-  - {fileID: 4741460638679888769}
-  - {fileID: 2213138244440198881}
-  - {fileID: 6595389136001848}
-  - {fileID: 2213138243328933434}
-  - {fileID: 2213138243825175206}
-  - {fileID: 2213138244652145206}
-  - {fileID: 6064569263342579601}
-  - {fileID: 6595389800869856}
-  - {fileID: 4741460639087718576}
-  - {fileID: 6064569263566896058}
-  - {fileID: 6595390319182489}
-  - {fileID: 4741460638013236934}
-  - {fileID: 6595389158142081}
-  - {fileID: 6595389482287373}
-  - {fileID: 300384663}
-  - {fileID: 1258642794}
-  - {fileID: 1133998003}
-  - {fileID: 958349001}
 --- !u!1 &662291546
 GameObject:
   m_ObjectHideFlags: 0
@@ -11988,6 +11942,7 @@ Transform:
   - {fileID: 1068608394}
   - {fileID: 249539908}
   - {fileID: 1074690700}
+  - {fileID: 661917681}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12008,6 +11963,36 @@ MonoBehaviour:
   player: {fileID: 1864285148}
   ballTouchHandler: {fileID: 1068608391}
   parentForObjects: {fileID: 249539908}
+  crowdAnimators:
+  - {fileID: 4821573922570178521}
+  - {fileID: 2965216995620922262}
+  - {fileID: 4821573921379805093}
+  - {fileID: 3982989392774566298}
+  - {fileID: 7382785099099804514}
+  - {fileID: 736968842162434925}
+  - {fileID: 4821573921681682544}
+  - {fileID: 2113347732581503}
+  - {fileID: 4821573921409323036}
+  - {fileID: 2965216995718797856}
+  - {fileID: 7382785099852811737}
+  - {fileID: 4741460638679888769}
+  - {fileID: 2213138244440198881}
+  - {fileID: 6595389136001848}
+  - {fileID: 2213138243328933434}
+  - {fileID: 2213138243825175206}
+  - {fileID: 2213138244652145206}
+  - {fileID: 6064569263342579601}
+  - {fileID: 6595389800869856}
+  - {fileID: 4741460639087718576}
+  - {fileID: 6064569263566896058}
+  - {fileID: 6595390319182489}
+  - {fileID: 4741460638013236934}
+  - {fileID: 6595389158142081}
+  - {fileID: 6595389482287373}
+  - {fileID: 300384663}
+  - {fileID: 1258642794}
+  - {fileID: 1133998003}
+  - {fileID: 958349001}
 --- !u!114 &868716881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17519,9 +17504,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1246523793}
-  - component: {fileID: 1246523794}
   m_Layer: 0
-  m_Name: FIrstPlayerCrowd
+  m_Name: Crowd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17534,8 +17518,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246523792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0.57, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6, y: 0.00999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17568,51 +17552,9 @@ Transform:
   - {fileID: 1435464282}
   - {fileID: 341080945}
   - {fileID: 81669091}
-  m_Father: {fileID: 30220846}
+  m_Father: {fileID: 412437093}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1246523794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246523792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f31e687c018724084105d2ef3c94c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crowdAnimator:
-  - {fileID: 2965216996732559866}
-  - {fileID: 2113347860280770}
-  - {fileID: 736968841138213913}
-  - {fileID: 4821573921864490469}
-  - {fileID: 3982989391349497284}
-  - {fileID: 7382785099621747472}
-  - {fileID: 4821573922120704926}
-  - {fileID: 4821573923171296650}
-  - {fileID: 4821573922045037219}
-  - {fileID: 2965216996193117372}
-  - {fileID: 7382785099751340448}
-  - {fileID: 6595388470518066}
-  - {fileID: 8589802185533578163}
-  - {fileID: 6064569263510788495}
-  - {fileID: 4741460637390746040}
-  - {fileID: 2213138244140640438}
-  - {fileID: 2213138243106914754}
-  - {fileID: 2213138242680088245}
-  - {fileID: 2213138242718988249}
-  - {fileID: 6064569263785866621}
-  - {fileID: 6595388775448280}
-  - {fileID: 4741460637591628206}
-  - {fileID: 6595388635872563}
-  - {fileID: 4741460637538952282}
-  - {fileID: 2213138243849713849}
-  - {fileID: 1435654424}
-  - {fileID: 1435464283}
-  - {fileID: 341080946}
-  - {fileID: 81669092}
 --- !u!1 &1249302205
 GameObject:
   m_ObjectHideFlags: 0
@@ -20465,7 +20407,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &1496916646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25807,7 +25749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attemptsUIController: {fileID: 664336051}
   countdownUIController: {fileID: 1660350921}
-  crowdAnimationController: {fileID: 661917682}
 --- !u!1 &1867467938
 GameObject:
   m_ObjectHideFlags: 0
@@ -27902,7 +27843,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attemptsUIController: {fileID: 528066355}
   countdownUIController: {fileID: 1384840678}
-  crowdAnimationController: {fileID: 1246523794}
 --- !u!1 &2018286040
 GameObject:
   m_ObjectHideFlags: 0

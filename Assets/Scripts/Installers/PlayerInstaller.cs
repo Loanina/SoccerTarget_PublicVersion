@@ -1,4 +1,6 @@
-﻿using Game.Ball;
+﻿using System.Collections.Generic;
+using Game.Ball;
+using Game.Crowd;
 using Target;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -10,10 +12,11 @@ namespace Installers
     public class PlayerInstaller : MonoInstaller
     {
         [SerializeField] private TargetConfig targetConfig;
-        [FormerlySerializedAs("puckSettings")] [SerializeField] private BallSettings ballSettings;
+        [SerializeField] private BallSettings ballSettings;
         [SerializeField] private Player.Player player;
-        [FormerlySerializedAs("puckTouchHandler")] [SerializeField] private BallTouchHandler ballTouchHandler;
+        [SerializeField] private BallTouchHandler ballTouchHandler;
         [SerializeField] private Transform parentForObjects;
+        [SerializeField] private List<Animator> crowdAnimators;
     
         public override void InstallBindings()
         {
@@ -25,6 +28,7 @@ namespace Installers
             Container.BindInterfacesAndSelfTo<BallPhysics>().AsSingle().WithArguments(ballSettings);
             Container.BindInterfacesAndSelfTo<BallDestroyer>().AsSingle().WithArguments(ballSettings);
             Container.BindInterfacesAndSelfTo<BallFactory>().AsSingle().WithArguments(ballSettings);
+            Container.BindInterfacesAndSelfTo<CrowdAnimationController>().AsSingle().WithArguments(crowdAnimators);
         }
     }
 }

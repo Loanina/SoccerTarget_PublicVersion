@@ -1,5 +1,5 @@
 ﻿using System;
-using Crowd;
+using Game.Crowd;
 using Music;
 using UnityEngine;
 using VFX;
@@ -11,15 +11,16 @@ namespace Player
     {
         [SerializeField] private AttemptsUIController attemptsUIController;
         [SerializeField] private CountdownUIController countdownUIController;
-        [SerializeField] private CrowdAnimationController crowdAnimationController;
+        private CrowdAnimationController crowdAnimationController;
         private AudioManager audioManager;
         private Timer timer = new Timer();
         private int totalAttempts = 0;
 
         [Inject]
-        public void Construct(AudioManager audioManager)
+        public void Construct(AudioManager audioManager, CrowdAnimationController crowdAnimationController)
         {
             this.audioManager = audioManager;
+            this.crowdAnimationController = crowdAnimationController;
         }
         
         public bool CanShoot { get; private set; } = false;

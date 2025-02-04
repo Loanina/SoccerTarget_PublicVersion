@@ -336,7 +336,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63173055}
-  - component: {fileID: 63173054}
   m_Layer: 0
   m_Name: Peoples
   m_TagString: Untagged
@@ -344,53 +343,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &63173054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63173053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f31e687c018724084105d2ef3c94c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crowdAnimator:
-  - {fileID: 2640588050184333362}
-  - {fileID: 890190551164748940}
-  - {fileID: 3152206786061229596}
-  - {fileID: 495563020422516422}
-  - {fileID: 3678418512263506291}
-  - {fileID: 4435057465498585121}
-  - {fileID: 5155962874564972716}
-  - {fileID: 7182255190727268885}
-  - {fileID: 5988885419986330148}
-  - {fileID: 9169212392099694035}
-  - {fileID: 3511280354816044919}
-  - {fileID: 781533360344317309}
-  - {fileID: 3784200452253218324}
-  - {fileID: 5899030634558493025}
-  - {fileID: 8046069729398669286}
-  - {fileID: 395348360889790160}
-  - {fileID: 8922496503296882634}
-  - {fileID: 3511191120712826603}
-  - {fileID: 7541517630147623333}
-  - {fileID: 2835984152653261232}
-  - {fileID: 8605928043948653034}
-  - {fileID: 4850962886951329785}
-  - {fileID: 2564360981459696113}
-  - {fileID: 720056513783755800}
-  - {fileID: 6205647229110278870}
-  - {fileID: 7230842373195714663}
-  - {fileID: 2547520866043281365}
-  - {fileID: 6987916906451962572}
-  - {fileID: 3511280354726622860}
-  - {fileID: 890190552541810095}
-  - {fileID: 460323385}
-  - {fileID: 1413194950}
-  - {fileID: 1567415469}
-  - {fileID: 479332213}
 --- !u!4 &63173055
 Transform:
   m_ObjectHideFlags: 0
@@ -6600,7 +6552,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attemptsUIController: {fileID: 1741102987}
   countdownUIController: {fileID: 1833301083}
-  crowdAnimationController: {fileID: 63173054}
 --- !u!224 &889669578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7023,6 +6974,41 @@ MonoBehaviour:
   player: {fileID: 889669577}
   ballTouchHandler: {fileID: 511856216}
   parentForObjects: {fileID: 1999332020}
+  crowdAnimators:
+  - {fileID: 2640588050184333362}
+  - {fileID: 890190551164748940}
+  - {fileID: 3152206786061229596}
+  - {fileID: 495563020422516422}
+  - {fileID: 3678418512263506291}
+  - {fileID: 4435057465498585121}
+  - {fileID: 5155962874564972716}
+  - {fileID: 7182255190727268885}
+  - {fileID: 5988885419986330148}
+  - {fileID: 9169212392099694035}
+  - {fileID: 3511280354816044919}
+  - {fileID: 781533360344317309}
+  - {fileID: 3784200452253218324}
+  - {fileID: 5899030634558493025}
+  - {fileID: 8046069729398669286}
+  - {fileID: 395348360889790160}
+  - {fileID: 8922496503296882634}
+  - {fileID: 3511191120712826603}
+  - {fileID: 7541517630147623333}
+  - {fileID: 2835984152653261232}
+  - {fileID: 8605928043948653034}
+  - {fileID: 4850962886951329785}
+  - {fileID: 2564360981459696113}
+  - {fileID: 720056513783755800}
+  - {fileID: 6205647229110278870}
+  - {fileID: 7230842373195714663}
+  - {fileID: 2547520866043281365}
+  - {fileID: 6987916906451962572}
+  - {fileID: 3511280354726622860}
+  - {fileID: 890190552541810095}
+  - {fileID: 460323385}
+  - {fileID: 1413194950}
+  - {fileID: 1567415469}
+  - {fileID: 479332213}
 --- !u!114 &972783591
 MonoBehaviour:
   m_ObjectHideFlags: 0
