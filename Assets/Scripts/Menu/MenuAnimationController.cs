@@ -1,8 +1,7 @@
 ﻿using DG.Tweening;
-using TouchScript.Gestures;
 using UnityEngine;
 
-namespace VFX
+namespace Menu
 {
     public class MenuAnimationController : MonoBehaviour
     {

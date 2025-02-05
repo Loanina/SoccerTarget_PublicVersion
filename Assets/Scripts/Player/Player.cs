@@ -2,7 +2,6 @@
 using Game.Crowd;
 using Music;
 using UnityEngine;
-using VFX;
 using Zenject;
 
 namespace Player

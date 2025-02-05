@@ -4121,6 +4121,7 @@ MonoBehaviour:
   forceMultiplier: 40
   activationTime: 1
   rotationSpeed: 360
+  startDelayForKick: 1.5
   targetPosition: {x: 0, y: 1.88, z: -9.715219}
   ballRigidbody: {fileID: 667264813}
 --- !u!135 &667264812
@@ -6088,7 +6089,7 @@ MonoBehaviour:
   minDelay: 0
   maxDelay: 1.5
   minIntensity: 0.1
-  maxIntensity: 3
+  maxIntensity: 2
 --- !u!1 &890831565
 GameObject:
   m_ObjectHideFlags: 0
@@ -18972,6 +18973,7 @@ MonoBehaviour:
   forceMultiplier: 40
   activationTime: 1
   rotationSpeed: 360
+  startDelayForKick: 1.5
   targetPosition: {x: 0, y: 1.88, z: -9.715219}
   ballRigidbody: {fileID: 3877521886329720927}
 --- !u!135 &3877521886329720926
