@@ -35,12 +35,12 @@ public class MultiGameController : IInitializable, IDisposable
         firstPlayer.OnEndGame += OnPlayerEndGame;
         secondPlayer.OnEndGame += OnPlayerEndGame;
         loadingButtons.SetActive(false);
-        audioManager.ChangeBackgroundToGame();
+        audioManager.PlayGameMusic();
     }
 
     public void Dispose()
     {
-        audioManager.ChangeBackgroundToMenu();
+        audioManager.PlayMenuMusic();
         firstPlayer.OnEndGame -= OnPlayerEndGame;
         secondPlayer.OnEndGame -= OnPlayerEndGame;
     }

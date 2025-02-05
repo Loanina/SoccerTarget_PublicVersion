@@ -1,6 +1,4 @@
 ﻿using System;
-using DG.Tweening;
-using Installers;
 using Music;
 using TouchScript.Layers;
 using UI;
@@ -29,13 +27,13 @@ public class SingleGameController  : IInitializable, IDisposable
     {
         player.OnEndGame += Win;
         loadingButtons.SetActive(false);
-        audioManager.ChangeBackgroundToGame();
+        audioManager.PlayGameMusic();
     }
 
     public void Dispose()
     {
         player.OnEndGame -= Win;
-        audioManager.ChangeBackgroundToMenu();
+        audioManager.PlayMenuMusic();
     }
     
     private void Win(Player.Player player)

@@ -11,7 +11,9 @@ namespace Installers
         public override void InstallBindings()
         {
             Container.BindInstance(musicSettings).AsSingle();
-            Container.BindInterfacesAndSelfTo<AudioManager>().AsSingle().NonLazy();
+            Container.Bind<AudioManager>().AsSingle();
+            Container.BindInterfacesAndSelfTo<MusicPlayer>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<SoundEffectsPlayer>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<GlobalLifecycleManager>().AsSingle().NonLazy();
         }
     }
