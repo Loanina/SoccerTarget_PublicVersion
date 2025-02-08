@@ -7008,14 +7008,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b28c71493a441e8997b9be6ff28b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveToMenuTime: 1.5
-  singleBall: {fileID: 2703449779503082292}
-  singleBallSpawnPoint: {x: 4, y: 0.3359144, z: 1.445}
-  singleBallMenuPoint: {x: 1.095, y: 0.3359144, z: 1.445}
-  multiBall: {fileID: 667264809}
-  multiBallSpawnPoint: {x: -4, y: 0.3359144, z: 1.445}
-  multiBallMenuPoint: {x: -1.095, y: 0.3359144, z: 1.445}
+  moveToMenuTime: 2
   ballRadius: 0.7
+  balls:
+  - Transform: {fileID: 2703449779503082292}
+    SpawnPoint: {x: 3, y: 0.3359144, z: 1.445}
+    MenuPoint: {x: 1.095, y: 0.3359144, z: 1.445}
+    RotationMultiplier: -1
+  - Transform: {fileID: 667264809}
+    SpawnPoint: {x: -3, y: 0.3359144, z: 1.445}
+    MenuPoint: {x: -1.095, y: 0.3359144, z: 1.445}
+    RotationMultiplier: 1
 --- !u!1 &1128765561
 GameObject:
   m_ObjectHideFlags: 0
@@ -11939,7 +11942,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &1717062085
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5515,8 +5515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1d777967524c66b09ea7d9ed8d25ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPlayer: {fileID: 2016810520}
-  secondPlayer: {fileID: 1864285148}
+  firstPlayer: {fileID: 412437096}
+  secondPlayer: {fileID: 868716882}
   loadingButtons: {fileID: 1964174907}
   firstFullscreenLayer: {fileID: 963194232}
   secondFullscreenLayer: {fileID: 1068608390}
@@ -6209,6 +6209,7 @@ GameObject:
   - component: {fileID: 412437093}
   - component: {fileID: 412437095}
   - component: {fileID: 412437094}
+  - component: {fileID: 412437096}
   m_Layer: 0
   m_Name: FirstPlayer
   m_TagString: Untagged
@@ -6247,9 +6248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300c84ccdd7b4678ae677e76feb279d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 412437096}
   targetConfig: {fileID: 11400000, guid: 5748566df0f6980498eeed0e4ae22142, type: 2}
   ballSettings: {fileID: 11400000, guid: 96aa4e3a3d962c4448fa9dc24f7c7837, type: 2}
-  player: {fileID: 2016810520}
+  playerUIController: {fileID: 2016810520}
   ballTouchHandler: {fileID: 963194230}
   parentForObjects: {fileID: 451143328}
   crowdAnimators:
@@ -6300,6 +6302,19 @@ MonoBehaviour:
   _installerPrefabs: []
   _autoRun: 1
   _kernel: {fileID: 0}
+--- !u!114 &412437096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412437092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd55a9b5c2649cfb1bdcdc46a0a250d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUIController: {fileID: 2016810520}
 --- !u!1 &412480431
 GameObject:
   m_ObjectHideFlags: 0
@@ -11920,6 +11935,7 @@ GameObject:
   - component: {fileID: 868716879}
   - component: {fileID: 868716881}
   - component: {fileID: 868716880}
+  - component: {fileID: 868716882}
   m_Layer: 0
   m_Name: SecondPlayer
   m_TagString: Untagged
@@ -11958,9 +11974,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300c84ccdd7b4678ae677e76feb279d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 868716882}
   targetConfig: {fileID: 11400000, guid: 9e80912d18cb51f4db77a376ae88e141, type: 2}
   ballSettings: {fileID: 11400000, guid: 96aa4e3a3d962c4448fa9dc24f7c7837, type: 2}
-  player: {fileID: 1864285148}
+  playerUIController: {fileID: 1864285148}
   ballTouchHandler: {fileID: 1068608391}
   parentForObjects: {fileID: 249539908}
   crowdAnimators:
@@ -12011,6 +12028,19 @@ MonoBehaviour:
   _installerPrefabs: []
   _autoRun: 1
   _kernel: {fileID: 0}
+--- !u!114 &868716882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868716878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd55a9b5c2649cfb1bdcdc46a0a250d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUIController: {fileID: 1864285148}
 --- !u!1 &875309173
 GameObject:
   m_ObjectHideFlags: 0
@@ -25744,11 +25774,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1864285146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd55a9b5c2649cfb1bdcdc46a0a250d, type: 3}
+  m_Script: {fileID: 11500000, guid: d54e54bfbb924b18b498102c823ca716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attemptsUIController: {fileID: 664336051}
-  countdownUIController: {fileID: 1660350921}
+  attemptsUI: {fileID: 664336051}
+  countdownUI: {fileID: 1660350921}
 --- !u!1 &1867467938
 GameObject:
   m_ObjectHideFlags: 0
@@ -27838,11 +27868,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2016810518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd55a9b5c2649cfb1bdcdc46a0a250d, type: 3}
+  m_Script: {fileID: 11500000, guid: d54e54bfbb924b18b498102c823ca716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attemptsUIController: {fileID: 528066355}
-  countdownUIController: {fileID: 1384840678}
+  attemptsUI: {fileID: 528066355}
+  countdownUI: {fileID: 1384840678}
 --- !u!1 &2018286040
 GameObject:
   m_ObjectHideFlags: 0

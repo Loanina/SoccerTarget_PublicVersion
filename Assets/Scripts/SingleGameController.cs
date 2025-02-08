@@ -4,6 +4,7 @@ using TouchScript.Layers;
 using UI;
 using UnityEngine;
 using Zenject;
+using Object = UnityEngine.Object;
 
 public class SingleGameController  : IInitializable, IDisposable
 {
@@ -39,7 +40,7 @@ public class SingleGameController  : IInitializable, IDisposable
     private void Win(Player.Player player)
     {
         player.Win();
-        GameObject.Destroy(fullscreenLayer);
+        Object.Destroy(fullscreenLayer);
         loadingButtons.SetActive(true);
         winInfo.SetPlayTime(player.GetPlaytime());
         winInfo.SetMissedAttempts(player.GetTotalAttempts() - 10);

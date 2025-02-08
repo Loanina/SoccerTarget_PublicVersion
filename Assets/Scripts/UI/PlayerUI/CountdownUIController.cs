@@ -4,7 +4,7 @@ using Music;
 using TMPro;
 using UnityEngine;
 
-namespace Player
+namespace UI.PlayerUI
 {
     public class CountdownUIController : MonoBehaviour
     {

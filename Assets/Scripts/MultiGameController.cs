@@ -5,6 +5,7 @@ using TouchScript.Layers;
 using UI;
 using UnityEngine;
 using Zenject;
+using Object = UnityEngine.Object;
 
 public class MultiGameController : IInitializable, IDisposable
 {
@@ -51,8 +52,8 @@ public class MultiGameController : IInitializable, IDisposable
         else
         {
             winnerPlayer.Win();
-            GameObject.Destroy(firstFullscreenLayer);
-            GameObject.Destroy(secondFullscreenLayer);
+            Object.Destroy(firstFullscreenLayer);
+            Object.Destroy(secondFullscreenLayer);
             loadingButtons.SetActive(true);
             var winnerText = "";
             winnerText = winnerPlayer == firstPlayer ? "red team win" : "blue team win";

@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa89f2b5d3a444998f06a45414937150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 889669577}
+  player: {fileID: 972783592}
   loadingButtons: {fileID: 1174081513}
   fullscreenLayer: {fileID: 511856215}
 --- !u!114 &195806526
@@ -6530,28 +6530,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 889669578}
-  - component: {fileID: 889669577}
+  - component: {fileID: 889669579}
   m_Layer: 5
-  m_Name: SinglePlayer
+  m_Name: SinglePlayerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &889669577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889669576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd55a9b5c2649cfb1bdcdc46a0a250d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attemptsUIController: {fileID: 1741102987}
-  countdownUIController: {fileID: 1833301083}
 --- !u!224 &889669578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6574,6 +6560,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &889669579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889669576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54e54bfbb924b18b498102c823ca716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attemptsUI: {fileID: 1741102987}
+  countdownUI: {fileID: 1833301083}
 --- !u!1 &891406632
 GameObject:
   m_ObjectHideFlags: 0
@@ -6931,6 +6931,7 @@ GameObject:
   - component: {fileID: 972783589}
   - component: {fileID: 972783591}
   - component: {fileID: 972783590}
+  - component: {fileID: 972783592}
   m_Layer: 0
   m_Name: SinglePlay
   m_TagString: Untagged
@@ -6969,9 +6970,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300c84ccdd7b4678ae677e76feb279d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 972783592}
   targetConfig: {fileID: 11400000, guid: 3e2fc81f82d13b7469dbcec7f2fcd4aa, type: 2}
   ballSettings: {fileID: 11400000, guid: d149e35cf96a72849aaedce033a4a101, type: 2}
-  player: {fileID: 889669577}
+  playerUIController: {fileID: 889669579}
   ballTouchHandler: {fileID: 511856216}
   parentForObjects: {fileID: 1999332020}
   crowdAnimators:
@@ -7027,6 +7029,19 @@ MonoBehaviour:
   _installerPrefabs: []
   _autoRun: 1
   _kernel: {fileID: 0}
+--- !u!114 &972783592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972783588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd55a9b5c2649cfb1bdcdc46a0a250d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUIController: {fileID: 889669579}
 --- !u!1 &982681706
 GameObject:
   m_ObjectHideFlags: 0

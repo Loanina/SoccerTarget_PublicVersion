@@ -8,8 +8,7 @@ namespace Player
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] private AttemptsUIController attemptsUIController;
-        [SerializeField] private CountdownUIController countdownUIController;
+        [SerializeField] private PlayerUIController playerUIController;
         private CrowdAnimationController crowdAnimationController;
         private AudioManager audioManager;
         private Timer timer = new Timer();
@@ -28,8 +27,7 @@ namespace Player
         public void Start()
         {
             CanShoot = false;
-            countdownUIController.CountdownFinished += OnCountdownFinished;
-            countdownUIController.StartCountDown(audioManager);
+            playerUIController.StartCountdown(OnCountdownFinished, audioManager);
             timer.Start();
         }
 
@@ -46,12 +44,11 @@ namespace Player
         private void OnCountdownFinished()
         {
             CanShoot = true;
-            countdownUIController.CountdownFinished -= OnCountdownFinished;
         }
 
         public void DecreaseAttempt()
         {
-            attemptsUIController.DecreaseAttempt();
+            playerUIController.DecreaseAttempt();
             crowdAnimationController.PlayCheer(3f); 
             audioManager.PlayTargetHit();
             audioManager.PlayCrowd();
