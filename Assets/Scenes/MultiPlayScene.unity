@@ -3513,6 +3513,7 @@ GameObject:
   - component: {fileID: 197740346}
   - component: {fileID: 197740348}
   - component: {fileID: 197740347}
+  - component: {fileID: 197740349}
   m_Layer: 5
   m_Name: WinInfo
   m_TagString: Untagged
@@ -3562,9 +3563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aff3276318f483b9685befbcae5aef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rectTransform: {fileID: 197740346}
-  animationDuration: 2
-  offScreenOffset: 100
+  animator: {fileID: 197740349}
   winnerInfo: {fileID: 919352993}
   redPlaytime: {fileID: 692619338}
   redMissed: {fileID: 167339196}
@@ -3578,6 +3577,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197740345}
   m_CullTransparentMesh: 1
+--- !u!114 &197740349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197740345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5baf3ef4c84aca88b2c2cbb3636c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 197740346}
+  animationDuration: 2
+  offScreenOffset: 100
+  easeTypeIn: 18
+  easeTypeOut: 17
+  slideDirection: 3
 --- !u!1 &200868909
 GameObject:
   m_ObjectHideFlags: 0
@@ -15682,6 +15699,7 @@ GameObject:
   - component: {fileID: 1122044641}
   - component: {fileID: 1122044640}
   - component: {fileID: 1122044639}
+  - component: {fileID: 1122044643}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -15724,9 +15742,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1122044640}
   sceneName: MultiPlayScene
-  rectTransform: {fileID: 1122044638}
-  animationDuration: 3
-  offScreenOffset: 100
 --- !u!114 &1122044640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15809,6 +15824,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122044637}
   m_CullTransparentMesh: 1
+--- !u!114 &1122044643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122044637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5baf3ef4c84aca88b2c2cbb3636c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 1122044638}
+  animationDuration: 3
+  offScreenOffset: 100
+  easeTypeIn: 18
+  easeTypeOut: 17
+  slideDirection: 0
 --- !u!1 &1125192365
 GameObject:
   m_ObjectHideFlags: 0
@@ -17029,6 +17062,7 @@ GameObject:
   - component: {fileID: 1222479422}
   - component: {fileID: 1222479421}
   - component: {fileID: 1222479420}
+  - component: {fileID: 1222479424}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -17071,9 +17105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1222479421}
   sceneName: MenuScene
-  rectTransform: {fileID: 1222479419}
-  animationDuration: 3
-  offScreenOffset: -100
 --- !u!114 &1222479421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17156,6 +17187,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222479418}
   m_CullTransparentMesh: 1
+--- !u!114 &1222479424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222479418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5baf3ef4c84aca88b2c2cbb3636c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 1222479419}
+  animationDuration: 3
+  offScreenOffset: 100
+  easeTypeIn: 18
+  easeTypeOut: 17
+  slideDirection: 1
 --- !u!1 &1223815175
 GameObject:
   m_ObjectHideFlags: 0
@@ -27073,7 +27122,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &1964174909
 MonoBehaviour:
   m_ObjectHideFlags: 0

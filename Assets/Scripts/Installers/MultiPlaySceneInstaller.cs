@@ -1,5 +1,6 @@
 ﻿using TouchScript.Layers;
 using UI;
+using UI.WinInfo;
 using UnityEngine;
 using Zenject;
 

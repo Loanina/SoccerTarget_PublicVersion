@@ -2235,7 +2235,7 @@ GameObject:
   - component: {fileID: 375441782}
   - component: {fileID: 375441784}
   - component: {fileID: 375441783}
-  - component: {fileID: 375441785}
+  - component: {fileID: 375441786}
   m_Layer: 5
   m_Name: 1Player
   m_TagString: Untagged
@@ -2360,7 +2360,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375441781}
   m_CullTransparentMesh: 1
---- !u!114 &375441785
+--- !u!114 &375441786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2369,12 +2369,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 375441781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 549b23f99a9a46789deedc7ded9e0917, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e5baf3ef4c84aca88b2c2cbb3636c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 375441782}
   animationDuration: 2
-  offScreenOffset: -800
+  offScreenOffset: 800
+  easeTypeIn: 18
+  easeTypeOut: 17
+  slideDirection: 1
 --- !u!1 &437098921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9227,7 +9230,7 @@ GameObject:
   - component: {fileID: 1400951859}
   - component: {fileID: 1400951861}
   - component: {fileID: 1400951860}
-  - component: {fileID: 1400951862}
+  - component: {fileID: 1400951863}
   m_Layer: 5
   m_Name: 2Players
   m_TagString: Untagged
@@ -9352,7 +9355,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400951858}
   m_CullTransparentMesh: 1
---- !u!114 &1400951862
+--- !u!114 &1400951863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9361,12 +9364,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1400951858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 549b23f99a9a46789deedc7ded9e0917, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e5baf3ef4c84aca88b2c2cbb3636c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1400951859}
   animationDuration: 2
   offScreenOffset: 800
+  easeTypeIn: 18
+  easeTypeOut: 17
+  slideDirection: 0
 --- !u!1 &1425803517
 GameObject:
   m_ObjectHideFlags: 0
@@ -9570,7 +9576,7 @@ GameObject:
   - component: {fileID: 1455858393}
   - component: {fileID: 1455858395}
   - component: {fileID: 1455858394}
-  - component: {fileID: 1455858396}
+  - component: {fileID: 1455858397}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -9648,7 +9654,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455858392}
   m_CullTransparentMesh: 1
---- !u!114 &1455858396
+--- !u!114 &1455858397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9657,12 +9663,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1455858392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 549b23f99a9a46789deedc7ded9e0917, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e5baf3ef4c84aca88b2c2cbb3636c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1455858393}
   animationDuration: 2
-  offScreenOffset: -1750
+  offScreenOffset: 1750
+  easeTypeIn: 18
+  easeTypeOut: 17
+  slideDirection: 1
 --- !u!1 &1471729049
 GameObject:
   m_ObjectHideFlags: 0
@@ -14805,7 +14814,7 @@ GameObject:
   - component: {fileID: 2074592909}
   - component: {fileID: 2074592911}
   - component: {fileID: 2074592910}
-  - component: {fileID: 2074592912}
+  - component: {fileID: 2074592913}
   m_Layer: 5
   m_Name: info
   m_TagString: Untagged
@@ -14930,7 +14939,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074592908}
   m_CullTransparentMesh: 1
---- !u!114 &2074592912
+--- !u!114 &2074592913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14939,12 +14948,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074592908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 549b23f99a9a46789deedc7ded9e0917, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e5baf3ef4c84aca88b2c2cbb3636c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 2074592909}
   animationDuration: 2
   offScreenOffset: 1750
+  easeTypeIn: 18
+  easeTypeOut: 17
+  slideDirection: 0
 --- !u!1 &2075670748
 GameObject:
   m_ObjectHideFlags: 0
