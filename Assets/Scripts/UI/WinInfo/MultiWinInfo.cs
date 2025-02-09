@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using Core.Interfaces;
+using TMPro;
+using UI.Elements;
 using UnityEngine;
 
 namespace UI.WinInfo

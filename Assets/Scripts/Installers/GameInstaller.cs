@@ -1,4 +1,6 @@
-﻿using Music;
+﻿using Audio.Managers;
+using Audio.Settings;
+using Core.Managers;
 using UnityEngine;
 using Zenject;
 

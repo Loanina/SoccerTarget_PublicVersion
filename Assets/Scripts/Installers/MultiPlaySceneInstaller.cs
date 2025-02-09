@@ -1,4 +1,6 @@
-﻿using TouchScript.Layers;
+﻿using Core.GameControllers;
+using Gameplay.Player;
+using TouchScript.Layers;
 using UI.WinInfo;
 using UnityEngine;
 using Zenject;
@@ -7,8 +9,8 @@ namespace Installers
 {
     public class MultiPlaySceneInstaller : MonoInstaller
     {
-        [SerializeField] private Player.Player firstPlayer;
-        [SerializeField] private Player.Player secondPlayer;
+        [SerializeField] private Player firstPlayer;
+        [SerializeField] private Player secondPlayer;
         [SerializeField] private GameObject loadingButtons;
         [SerializeField] private FullscreenLayer firstFullscreenLayer;
         [SerializeField] private FullscreenLayer secondFullscreenLayer;

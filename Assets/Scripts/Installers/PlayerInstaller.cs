@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
-using Game.Ball;
-using Game.Crowd;
-using Game.Target;
-using Player;
+using Gameplay.Ball;
+using Gameplay.Crowd;
+using Gameplay.Player;
+using Gameplay.Target;
+using UI.Controllers;
 using UnityEngine;
 using Zenject;
 
@@ -10,7 +11,7 @@ namespace Installers
 {
     public class PlayerInstaller : MonoInstaller
     {
-        [SerializeField] private Player.Player player;
+        [SerializeField] private Player player;
         [SerializeField] private TargetConfig targetConfig;
         [SerializeField] private BallSettings ballSettings;
         [SerializeField] private PlayerUIController playerUIController;
@@ -21,7 +22,7 @@ namespace Installers
         public override void InstallBindings()
         {
             Container.Bind<PlayerUIController>().FromInstance(playerUIController).AsSingle();
-            Container.Bind<Player.Player>().FromInstance(player).AsSingle();
+            Container.Bind<Player>().FromInstance(player).AsSingle();
             Container.BindInterfacesAndSelfTo<TargetController>().AsSingle();
             Container.Bind<TargetSpawner>().AsSingle().WithArguments(targetConfig, parentForObjects);
             Container.Bind<TargetDestroyer>().AsSingle().WithArguments(targetConfig, parentForObjects);

@@ -1,4 +1,6 @@
-﻿using TouchScript.Layers;
+﻿using Core.GameControllers;
+using Gameplay.Player;
+using TouchScript.Layers;
 using UI.WinInfo;
 using UnityEngine;
 using Zenject;
@@ -7,7 +9,7 @@ namespace Installers
 {
     public class SinglePlaySceneInstaller : MonoInstaller
     {
-        [SerializeField] private Player.Player player;
+        [SerializeField] private Player player;
         [SerializeField] private GameObject loadingButtons;
         [SerializeField] private FullscreenLayer fullscreenLayer;
     
