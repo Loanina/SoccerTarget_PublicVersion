@@ -41,6 +41,11 @@ namespace Player
             return totalAttempts;
         }
 
+        public int GetMissedAttempts()
+        {
+            return totalAttempts - playerUIController.GetMaxAttemptsCount();
+        }
+
         private void OnCountdownFinished()
         {
             CanShoot = true;
@@ -56,6 +61,7 @@ namespace Player
 
         public void EndGame()
         {
+            Debug.Log("EndGame вызван");
             OnEndGame?.Invoke(this);
             CanShoot = false;
             timer.Stop();

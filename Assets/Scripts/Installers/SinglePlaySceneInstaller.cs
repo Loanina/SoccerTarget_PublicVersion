@@ -1,5 +1,4 @@
 ﻿using TouchScript.Layers;
-using UI;
 using UI.WinInfo;
 using UnityEngine;
 using Zenject;
@@ -14,7 +13,7 @@ namespace Installers
     
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<SingleGameController>().AsSingle().WithArguments(player, loadingButtons, fullscreenLayer);
+            Container.BindInterfacesAndSelfTo<SingleGameController>().AsSingle().WithArguments(player, loadingButtons, fullscreenLayer).NonLazy();
             Container.Bind<SingleWinInfo>().FromComponentInHierarchy().AsSingle();
         }
     }

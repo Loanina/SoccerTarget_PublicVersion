@@ -1,65 +1,67 @@
-﻿using System;
-using DG.Tweening;
-using Music;
-using TouchScript.Layers;
-using UI;
+﻿using Music;
 using UI.WinInfo;
+using TouchScript.Layers;
 using UnityEngine;
 using Zenject;
-using Object = UnityEngine.Object;
 
-public class MultiGameController : IInitializable, IDisposable
+public class MultiGameController : BaseGameController
 {
     private readonly Player.Player firstPlayer;
     private readonly Player.Player secondPlayer;
-    private Player.Player winnerPlayer;
-    private readonly GameObject loadingButtons;
-    private readonly AudioManager audioManager;
     private readonly MultiWinInfo winInfo;
     private readonly FullscreenLayer firstFullscreenLayer;
     private readonly FullscreenLayer secondFullscreenLayer;
-    
+    private Player.Player winnerPlayer;
+
     [Inject]
-    public MultiGameController(Player.Player firstPlayer, Player.Player secondPlayer, GameObject loadingButtons, AudioManager audioManager,
-        MultiWinInfo multiWinInfo, FullscreenLayer firstFullscreenLayer, FullscreenLayer secondFullscreenLayer)
+    public MultiGameController(Player.Player firstPlayer, Player.Player secondPlayer, GameObject loadingButtons, 
+        AudioManager audioManager, MultiWinInfo winInfo,
+        FullscreenLayer firstFullscreenLayer, FullscreenLayer secondFullscreenLayer)
+        : base(audioManager, loadingButtons)
     {
+        Debug.Log($"firstPlayer: {firstPlayer}, secondPlayer: {secondPlayer}, audioManager: {audioManager}, winInfo: {winInfo}, loadind buttons: {loadingButtons}" +
+                  $"first laer {firstFullscreenLayer} second layer {secondFullscreenLayer}");
+
+        this.firstPlayer = firstPlayer;
         this.firstPlayer = firstPlayer;
         this.secondPlayer = secondPlayer;
-        this.loadingButtons = loadingButtons;
-        this.audioManager = audioManager;
-        winInfo = multiWinInfo;
+        this.winInfo = winInfo;
         this.firstFullscreenLayer = firstFullscreenLayer;
         this.secondFullscreenLayer = secondFullscreenLayer;
     }
 
-    public void Initialize()
+    public override void Initialize()
     {
+        base.Initialize();
         firstPlayer.OnEndGame += OnPlayerEndGame;
         secondPlayer.OnEndGame += OnPlayerEndGame;
-        loadingButtons.SetActive(false);
-        audioManager.PlayGameMusic();
+        Debug.Log("Подписка на события игроков");
     }
 
-    public void Dispose()
+    public override void Dispose()
     {
-        audioManager.PlayMenuMusic();
+        Debug.Log("Отписка от событий игроков");
         firstPlayer.OnEndGame -= OnPlayerEndGame;
         secondPlayer.OnEndGame -= OnPlayerEndGame;
+        base.Dispose();
     }
-    
+
     private void OnPlayerEndGame(Player.Player player)
     {
-        if (winnerPlayer == null) winnerPlayer = player;
+        Debug.Log("END GAME CONTROLLER");
+        if (winnerPlayer == null)
+        {
+            winnerPlayer = player;
+        }
         else
         {
             winnerPlayer.Win();
             Object.Destroy(firstFullscreenLayer);
             Object.Destroy(secondFullscreenLayer);
-            loadingButtons.SetActive(true);
-            var winnerText = "";
-            winnerText = winnerPlayer == firstPlayer ? "red team win" : "blue team win";
-            winInfo.SetWinInfo(winnerText, firstPlayer.GetPlaytime(), secondPlayer.GetPlaytime(),
-                firstPlayer.GetTotalAttempts() - 10, secondPlayer.GetTotalAttempts() - 10);
+            base.ShowLoadingButtons();
+            var winnerText = winnerPlayer == firstPlayer ? "Red Team Wins" : "Blue Team Wins";
+            winInfo.SetWinInfo(winnerText, firstPlayer.GetPlaytime(), secondPlayer.GetPlaytime(), 
+                firstPlayer.GetMissedAttempts(), secondPlayer.GetMissedAttempts());
         }
     }
 }

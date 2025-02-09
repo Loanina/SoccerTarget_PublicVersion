@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace UI.PlayerUI
@@ -18,6 +19,8 @@ namespace UI.PlayerUI
                attempts.Add(attempt);
             }
         }
+
+        public int GetMaxAttemptsCount() => maxAttemptsCount;
 
         public void DecreaseAttempt()
         {

@@ -1,49 +1,43 @@
-﻿using System;
-using Music;
-using TouchScript.Layers;
-using UI;
+﻿using Music;
 using UI.WinInfo;
+using TouchScript.Layers;
 using UnityEngine;
 using Zenject;
-using Object = UnityEngine.Object;
 
-public class SingleGameController  : IInitializable, IDisposable
+public class SingleGameController : BaseGameController
 {
     private readonly Player.Player player;
-    private readonly GameObject loadingButtons;
-    private readonly AudioManager audioManager;
     private readonly SingleWinInfo winInfo;
     private readonly FullscreenLayer fullscreenLayer;
 
     [Inject]
-    public SingleGameController(Player.Player player, GameObject loadingButtons, AudioManager audioManager, SingleWinInfo winInfo, FullscreenLayer fullscreenLayer)
+    public SingleGameController(Player.Player player, GameObject loadingButtons, AudioManager audioManager, 
+        SingleWinInfo winInfo, FullscreenLayer fullscreenLayer)
+        : base(audioManager, loadingButtons)
     {
         this.player = player;
-        this.loadingButtons = loadingButtons;
-        this.audioManager = audioManager;
         this.winInfo = winInfo;
         this.fullscreenLayer = fullscreenLayer;
     }
 
-    public void Initialize()
+    public override void Initialize()
     {
-        player.OnEndGame += Win;
-        loadingButtons.SetActive(false);
-        audioManager.PlayGameMusic();
+        base.Initialize();
+        player.OnEndGame += EndGame;
     }
 
-    public void Dispose()
+    public override void Dispose()
     {
-        player.OnEndGame -= Win;
-        audioManager.PlayMenuMusic();
+        player.OnEndGame -= EndGame;
+        base.Dispose();
     }
-    
-    private void Win(Player.Player player)
+
+    private void EndGame(Player.Player player)
     {
         player.Win();
         Object.Destroy(fullscreenLayer);
-        loadingButtons.SetActive(true);
+        base.ShowLoadingButtons();
         winInfo.SetPlayTime(player.GetPlaytime());
-        winInfo.SetMissedAttempts(player.GetTotalAttempts() - 10);
+        winInfo.SetMissedAttempts(player.GetMissedAttempts());
     }
 }

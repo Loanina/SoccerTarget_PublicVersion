@@ -15,6 +15,8 @@ namespace Player
             countdownUI.StartCountDown(audioManager);
         }
 
+        public int GetMaxAttemptsCount() => attemptsUI.GetMaxAttemptsCount();
+
         public void DecreaseAttempt()
         {
             attemptsUI.DecreaseAttempt();

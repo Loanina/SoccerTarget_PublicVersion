@@ -1,5 +1,4 @@
 ﻿using TouchScript.Layers;
-using UI;
 using UI.WinInfo;
 using UnityEngine;
 using Zenject;
@@ -16,7 +15,8 @@ namespace Installers
     
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<MultiGameController>().AsSingle().WithArguments(firstPlayer, secondPlayer, loadingButtons, firstFullscreenLayer, secondFullscreenLayer);
+            Container.BindInterfacesAndSelfTo<MultiGameController>().AsSingle()
+                .WithArguments(firstPlayer, secondPlayer, loadingButtons, firstFullscreenLayer, secondFullscreenLayer).NonLazy();
             Container.Bind<MultiWinInfo>().FromComponentInHierarchy().AsSingle();
         }
     }
